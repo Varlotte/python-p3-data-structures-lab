@@ -25,13 +25,19 @@ def get_names(spicy_foods):
 
 def get_spiciest_foods(spicy_foods):
     return [d for d in spicy_foods if d["heat_level"] > 5] or []
-    # Define a function get_spiciest_foods() that takes a list of spicy_foods and returns a list of dictionaries where the heat level of the food is greater than 5.
-    pass
 
 
 def print_spicy_foods(spicy_foods):
-    # Define a function print_spicy_foods() that takes a list of spicy_foods and output to the terminal each spicy food in the following format using print(): Buffalo Wings (American) | Heat Level: 🌶🌶🌶.
-    pass
+    for food in spicy_foods:
+        name = food["name"]
+        heat_level = food["heat_level"]
+        print(
+            f"{name} ({food['cuisine']}) | Heat Level: {'🌶'* heat_level}")
+
+
+print_spicy_foods(spicy_foods)
+
+# Define a function print_spicy_foods() that takes a list of spicy_foods and output to the terminal each spicy food in the following format using print(): Buffalo Wings (American) | Heat Level: 🌶🌶🌶.
 
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine):
