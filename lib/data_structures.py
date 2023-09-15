@@ -24,6 +24,7 @@ def get_names(spicy_foods):
 
 
 def get_spiciest_foods(spicy_foods):
+    return [d for d in spicy_foods if d["heat_level"] > 5] or []
     # Define a function get_spiciest_foods() that takes a list of spicy_foods and returns a list of dictionaries where the heat level of the food is greater than 5.
     pass
 
