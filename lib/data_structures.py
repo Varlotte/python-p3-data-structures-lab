@@ -58,12 +58,9 @@ def get_average_heat_level(spicy_foods):
 
     return (sum/len(spicy_foods))
 
-    # Define a function average_heat_level() that takes a list of spicy_foods and returns an integer representing the average heat level of all the spicy foods in the array.
-
-    # heat_level from each dict added together/length of list of dicts
-    pass
-
 
 def create_spicy_food(spicy_foods, spicy_food):
+    spicy_foods.append(spicy_food)
+    return spicy_foods
+
     # Define a function create_spicy_food() that takes a list of spicy_foods and a new spicy_food and returns the original list with the new spicy_food added.
-    pass
