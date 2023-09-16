@@ -46,15 +46,21 @@ def get_spicy_food_by_cuisine(spicy_foods, cuisine):
 
 
 def print_spiciest_foods(spicy_foods):
-    for food in spicy_foods:
-        name = food["name"]
-        heat_level = food["heat_level"]
-        print(
-            f"{name} ({food['cuisine']}) | Heat Level: {'🌶'* heat_level}") if heat_level > 5 else None
+    print_spicy_foods(get_spiciest_foods(spicy_foods))
+    # print(
+    # f"{name} ({food['cuisine']}) | Heat Level: {'🌶'* heat_level}") if heat_level > 5 else None
 
 
 def get_average_heat_level(spicy_foods):
+    sum = 0
+    for food in spicy_foods:
+        sum = food["heat_level"] + sum
+
+    return (sum/len(spicy_foods))
+
     # Define a function average_heat_level() that takes a list of spicy_foods and returns an integer representing the average heat level of all the spicy foods in the array.
+
+    # heat_level from each dict added together/length of list of dicts
     pass
 
 
